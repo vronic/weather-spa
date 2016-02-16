@@ -1,19 +1,24 @@
 {
    "extends": "rackt",
-  // I want to use babel-eslint for parsing!
+  # // I want to use babel-eslint for parsing!
   "parser": "babel-eslint",
   "env": {
-    // I write for browser
+    # // I write for browser
     "browser": true,
-    // in CommonJS
+    # // in CommonJS
     "node": true
   },
-  // To give you an idea how to override rule options:
+  # // To give you an idea how to override rule options:
   "rules": {
     "quotes": [2, "single"],
     "eol-last": [0],
     "no-mixed-requires": [0],
     "no-underscore-dangle": [0],
-    "strict": [2, "never"]
-  }
+    "strict": [2, "never"],
+
+    # // https://www.npmjs.com/package/eslint-plugin-react
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1
+  },
+  "plugins": ["react"]
 }
